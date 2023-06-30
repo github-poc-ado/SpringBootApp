@@ -15,11 +15,10 @@ jobs:
       contents: read
       security-events: write
       actions: read
-    with:
-          token: ${{ secrets.SECURITY_TOKEN }}  
-          sarifReportDir: "../results"
-          outputDir: ${{ github.workspace }}
-          repository: ${{ github.repository }}
+    with: 
+      sarifReportDir: "../results"
+      outputDir: ${{ github.workspace }}
+      repository: ${{ github.repository }}
    ###with:
          #java-version: '11'
   
