@@ -15,8 +15,6 @@ jobs:
       contents: read
       security-events: write
       actions: read
-    with:
-     token: ${{ secrets.SECURITY_TOKEN }}
    ###with:
          #java-version: '11'
   
