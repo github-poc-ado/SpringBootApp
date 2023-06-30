@@ -15,7 +15,7 @@ jobs:
       contents: read
       security-events: write
       actions: read
-    #with:
+   # #with:
          #java-version: '11'
   
   #github-actions-azlogin:
