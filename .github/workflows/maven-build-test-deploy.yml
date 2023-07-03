@@ -15,6 +15,8 @@ jobs:
       contents: read
       security-events: write
       actions: read
+    secrets:
+      token: ${{ secrets.SECRET_TOKEN }}
    # with: 
    #   sarifReportDir: "../results"
    #   outputDir: ${{ github.workspace }}
