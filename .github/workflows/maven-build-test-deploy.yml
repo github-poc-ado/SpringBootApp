@@ -17,6 +17,11 @@ jobs:
       actions: read
     secrets:
       token: ${{ secrets.SECRET_TOKEN }}
+      username: ${{ secrets.REGISTRY_USERNAME }}
+      password: ${{ secrets.REGISTRY_PASSWORD }}
+      creds: '${{ secrets.AZURE_CREDENTIALS }}'
+    with: 
+      
    # with: 
    #   sarifReportDir: "../results"
    #   outputDir: ${{ github.workspace }}
