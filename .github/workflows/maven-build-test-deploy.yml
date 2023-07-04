@@ -20,7 +20,11 @@ jobs:
       username: ${{ secrets.REGISTRY_USERNAME }}
       password: ${{ secrets.REGISTRY_PASSWORD }}
       creds: '${{ secrets.AZURE_CREDENTIALS }}'
-    with: 
+    with:
+      REGISTRY_NAME: '${{ REGISTRY_NAME }}'
+      CLUSTER_NAME: '${{ CLUSTER_NAME }}'
+      CLUSTER_RESOURCE_GROUP: '${{ CLUSTER_RESOURCE_GROUP }}'
+      NAMESPACE: '${{ NAMESPACE }}'
       
    # with: 
    #   sarifReportDir: "../results"
