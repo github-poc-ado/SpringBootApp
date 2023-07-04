@@ -5,7 +5,7 @@ on:
       - main
  pull_request:
     types: [ assigned, opened, synchronize, reopened ]
-
+  
 jobs:
   build-test-deploy: 
     uses: github-poc-ado/Reuseable-workflow/.github/workflows/framework.yml@main
@@ -20,7 +20,11 @@ jobs:
       username: ${{ secrets.REGISTRY_USERNAME }}
       password: ${{ secrets.REGISTRY_PASSWORD }}
       creds: '${{ secrets.AZURE_CREDENTIALS }}'
-  
+    with:
+      REGISTRY_NAME: '${{ REGISTRY_NAME }}'
+      CLUSTER_NAME: '${{ CLUSTER_NAME }}'
+      CLUSTER_RESOURCE_GROUP: '${{ CLUSTER_RESOURCE_GROUP }}'
+      NAMESPACE: '${{ NAMESPACE }}'
    # with: 
    #   sarifReportDir: "../results"
    #   outputDir: ${{ github.workspace }}
