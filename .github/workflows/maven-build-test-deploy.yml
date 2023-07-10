@@ -19,7 +19,7 @@ jobs:
       token: ${{ secrets.SECRET_TOKEN }}
       username: ${{ secrets.REGISTRY_USERNAME }}
       password: ${{ secrets.REGISTRY_PASSWORD }}
-      creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      creds: ${{ secrets.AZURE_CREDENTIALS }}
     with:
       java_version: '11'
       #REGISTRY_NAME: '${{ REGISTRY_NAME }}'
