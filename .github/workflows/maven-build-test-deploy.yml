@@ -21,20 +21,10 @@ jobs:
       password: ${{ secrets.REGISTRY_PASSWORD }}
       creds: '${{ secrets.AZURE_CREDENTIALS }}'
     with:
+      java_version: '11'
       REGISTRY_NAME: '${{ REGISTRY_NAME }}'
       CLUSTER_NAME: '${{ CLUSTER_NAME }}'
       CLUSTER_RESOURCE_GROUP: '${{ CLUSTER_RESOURCE_GROUP }}'
       NAMESPACE: '${{ NAMESPACE }}'
-   # with: 
-   #   sarifReportDir: "../results"
-   #   outputDir: ${{ github.workspace }}
-   #  repository: ${{ github.repository }}
-   ###with:
-         #java-version: '11'
-  
-  #github-actions-azlogin:
-   # uses: github-poc-ado/Reuseable-workflow/.github/workflows/Azure_login_caller.yml@main
-    #secrets: inherit 
-     #creds: ${{ secrets.AZURE_CREDENTIALS }}
-     
+
  
