@@ -1,8 +1,8 @@
 name: Test & Build Using Java & Maven, publish test results
 on: 
- push:
-   branches: 
-      - main
+ #push:
+ #  branches: 
+ #     - main
  pull_request:
     types: [ assigned, opened, synchronize, reopened ]
   
@@ -13,13 +13,13 @@ jobs:
       checks: write
       pull-requests: write
       contents: read
-      security-events: write
-      actions: read
-    secrets:
-      token: ${{ secrets.SECRET_TOKEN }}
-      username: ${{ secrets.REGISTRY_USERNAME }}
-      password: ${{ secrets.REGISTRY_PASSWORD }}
-      creds: ${{ secrets.AZURE_CREDENTIALS }}
+      #security-events: write
+      #actions: read
+    #secrets:
+     # token: ${{ secrets.SECRET_TOKEN }}
+     # username: ${{ secrets.REGISTRY_USERNAME }}
+     # password: ${{ secrets.REGISTRY_PASSWORD }}
+     # creds: ${{ secrets.AZURE_CREDENTIALS }}
     with:
       java_version: '11'
       #REGISTRY_NAME: '${{ REGISTRY_NAME }}'
