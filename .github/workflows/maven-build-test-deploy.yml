@@ -6,7 +6,11 @@ on:
      - testing
  pull_request:
     types: [ assigned, opened, synchronize, reopened ]
-permissions:
+
+jobs:
+  build-test-deploy: 
+       uses: github-poc-ado/Reuseable-workflow/.github/workflows/framework.yml@main
+       permissions:
          checks: write
          pull-requests: write
          contents: read
@@ -17,12 +21,6 @@ permissions:
         # username: ${{ secrets.REGISTRY_USERNAME }}
         # password: ${{ secrets.REGISTRY_PASSWORD }}
         # creds: ${{ secrets.AZURE_CREDENTIALS }} 
-jobs:
-  build-test-deploy: 
-    runs-on: ubuntu-latest
-    steps:
-     - name: uses reusable workflow
-       uses: github-poc-ado/Reuseable-workflow/.github/workflows/framework.yml@main
        with:
         java_version: '11'
         #REGISTRY_NAME: '${{ REGISTRY_NAME }}'
@@ -30,14 +28,8 @@ jobs:
         #CLUSTER_RESOURCE_GROUP: '${{ CLUSTER_RESOURCE_GROUP }}'
         #NAMESPACE: '${{ NAMESPACE }}'
        
-       #maintain reusable workflows in multiple branches
-     - name: test to main branch
-       if: github.ref == 'refs/heads/main'
-       run: echo "hello its main branch"
-       
-     - name: test to testing branch
-       if: github.ref == 'refs/heads/testing'
-       run: echo "hello its testing branch"
+      
+
 
          
 
