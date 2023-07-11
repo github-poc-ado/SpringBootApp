@@ -1,8 +1,9 @@
 name: Test & Build Using Java & Maven, publish test results
 on: 
- #push:
- #  branches: 
- #     - main
+ push:
+   branches: 
+     - main
+     - testing
  pull_request:
     types: [ assigned, opened, synchronize, reopened ]
   
