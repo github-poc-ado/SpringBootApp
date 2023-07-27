@@ -16,14 +16,15 @@ jobs:
          contents: read
          #security-events: write
          #actions: read
-       #secrets:
+       secrets:
         # token: ${{ secrets.SECRET_TOKEN }}
-        # username: ${{ secrets.REGISTRY_USERNAME }}
-        # password: ${{ secrets.REGISTRY_PASSWORD }}
-        # creds: ${{ secrets.AZURE_CREDENTIALS }} 
+         username: ${{ secrets.REGISTRY_USERNAME }}
+         password: ${{ secrets.REGISTRY_PASSWORD }}
+         creds: ${{ secrets.AZURE_CREDENTIALS }} 
+         REGISTRY_NAME: ${{ secrets.REGISTRY_NAME }}
        with:
         java_version: '11'
-        #REGISTRY_NAME: '${{ REGISTRY_NAME }}'
+        
         #CLUSTER_NAME: '${{ CLUSTER_NAME }}'
         #CLUSTER_RESOURCE_GROUP: '${{ CLUSTER_RESOURCE_GROUP }}'
         #NAMESPACE: '${{ NAMESPACE }}'
