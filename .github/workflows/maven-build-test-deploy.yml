@@ -9,7 +9,8 @@ on:
 
 jobs:
   build-test-deploy: 
-       uses: github-poc-ado/Reuseable-workflow/.github/workflows/framework.yml@main
+       #uses: github-poc-ado/Reuseable-workflow/.github/workflows/framework.yml@main
+       uses: github-poc-ado/Reuseable-workflow/.github/workflows/build-push.yml@main
        permissions:
          checks: write
          pull-requests: write
