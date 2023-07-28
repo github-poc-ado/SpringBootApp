@@ -21,7 +21,7 @@ jobs:
         # token: ${{ secrets.SECRET_TOKEN }}
          REGISTRY_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
          REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
-         AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }} 
+         creds: ${{ secrets.AZURE_CREDENTIALS }} 
          REGISTRY_NAME: ${{ secrets.REGISTRY_NAME }}
          NAMESPACE: ${{ secrets.NAMESPACE }}
          CLUSTER_NAME: ${{ secrets.CLUSTER_NAME }}
