@@ -23,6 +23,9 @@ jobs:
          REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }} 
          REGISTRY_NAME: ${{ secrets.REGISTRY_NAME }}
+         NAMESPACE: ${{ secrets.NAMESPACE }}
+         CLUSTER_NAME: ${{ secrets.CLUSTER_NAME }}
+         CLUSTER_RESOURCE_GROUP: ${{ secrets.CLUSTER_RESOURCE_GROUP }}
        with:
         java_version: '11'
         
