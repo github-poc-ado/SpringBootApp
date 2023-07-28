@@ -28,7 +28,7 @@ jobs:
          CLUSTER_RESOURCE_GROUP: ${{ secrets.CLUSTER_RESOURCE_GROUP }}
        with:
         java_version: '11'
-        
+       
         #CLUSTER_NAME: '${{ CLUSTER_NAME }}'
         #CLUSTER_RESOURCE_GROUP: '${{ CLUSTER_RESOURCE_GROUP }}'
         #NAMESPACE: '${{ NAMESPACE }}'
