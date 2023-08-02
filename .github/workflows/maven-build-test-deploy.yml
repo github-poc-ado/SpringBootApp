@@ -26,6 +26,8 @@ jobs:
          NAMESPACE: ${{ secrets.NAMESPACE }}
          CLUSTER_NAME: ${{ secrets.CLUSTER_NAME }}
          CLUSTER_RESOURCE_GROUP: ${{ secrets.CLUSTER_RESOURCE_GROUP }}
+         AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+         AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
        with:
         java_version: '11'
        
