@@ -28,7 +28,7 @@ jobs:
          CLUSTER_RESOURCE_GROUP: ${{ secrets.CLUSTER_RESOURCE_GROUP }}
          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-         REPOSITORY: ${{ secrets.repository }}
+         AZURE_REPOSITORY: ${{ secrets.AZURE_REPOSITORY }}
        with:
         java_version: '11'
        
